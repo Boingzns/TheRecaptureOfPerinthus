@@ -1,9 +1,10 @@
-
+import java.util.Scanner;
 
 public class BattleSequencer implements Interfaces.IBattleSequencer {
 
-	public void Battle(Interfaces.IMainCharacter mainy, Interfaces.IEnemy enemy)
+	public void Battle(Interfaces.IMainCharacter mainy, Interfaces.IEnemy enemy) throws InterruptedException
 	{
+		Scanner inputPlace = new Scanner (System.in);
 		System.out.println("battle engaged");
 		while (!mainy.IsDead() && !enemy.IsDead()) {
 			// each roll dice Once
@@ -12,6 +13,8 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			System.out.println("your health:" + mainy.GetHealth());
 			System.out.println("enemy health:" + enemy.GetHealth());
 			// compare rolls
+			
+			inputPlace.nextLine();
 			if(playersAttack > enemyAttack) {
 				System.out.println("hit! the enemy loses 3 health");
 				enemy.LoseHealth();
@@ -34,5 +37,6 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 		if(enemy.IsDead()) {
 			System.out.println("enemy vanquished");
 		}
+		inputPlace.close();
 	}
 }

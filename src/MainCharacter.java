@@ -37,12 +37,11 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 
 	@Override
 	public void LoseHealth() {
-		// TODO Auto-generated method stub
+		Health -=3;
 		
 	}
 
 	@Override
 	public boolean IsDead() {
-		// TODO Auto-generated method stub
-		return false;
+		return Health <= 0;
 	}}

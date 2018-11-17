@@ -32,8 +32,7 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 
 	@Override
 	public int GetHealth() {
-		// TODO Auto-generated method stub
-		return 0;
+		return Health;
 	}
 
 	@Override

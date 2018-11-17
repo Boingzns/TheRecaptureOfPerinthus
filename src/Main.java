@@ -16,9 +16,10 @@ public class Main {
 		
 		// make enemy
 		SimpleEnemy YoteyBoi = new SimpleEnemy();
+		
 		// fight them
-		
-		
+			battler.Battle(yeetyboi, YoteyBoi);
+
 	}
 
 }

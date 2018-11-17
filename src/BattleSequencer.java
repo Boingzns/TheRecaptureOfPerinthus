@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class BattleSequencer implements Interfaces.IBattleSequencer {
 
-	public void Battle(Interfaces.IMainCharacter mainy, Interfaces.IEnemy enemy) throws InterruptedException
+	public void Battle(Interfaces.IMainCharacter mainy, Interfaces.IEnemy enemy)
 	{
 		Scanner inputPlace = new Scanner (System.in);
 		System.out.println("battle engaged");

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class BattleSequencer implements Interfaces.IBattleSequencer {
 	
-	String[] attackPhrases = {
+	private String[] attackPhrases = {
 			"attack1",
 			"attack2"};
 

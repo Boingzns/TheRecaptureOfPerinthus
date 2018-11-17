@@ -9,8 +9,8 @@ public class DiceRoller {
 		return rand.nextInt(6) + 1;
 	}
 	
-	public static int AttackPhrasesNumber(int attackPhrasesLength) {
-		// returns a number between 0 and 2
-		return rand.nextInt(attackPhrasesLength);
+	public static int GeneratePhraseIndex(int phrasesLength) {
+		// returns a number that works with phrases array
+		return rand.nextInt(phrasesLength);
 	}
 }

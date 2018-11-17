@@ -16,6 +16,6 @@ public class Interfaces {
 	}
 	
 	public interface IBattleSequencer{
-		void Battle(IMainCharacter main, IEnemy enemy);
+		void Battle(IMainCharacter main, IEnemy enemy) throws InterruptedException;
 	}
 }

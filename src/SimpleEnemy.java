@@ -2,7 +2,7 @@ public class SimpleEnemy implements Interfaces.IEnemy {
 	private int Health = 5;
 	
 	public int GetSkill() {
-		return 50;
+		return 5;
 	}
 
 	public int GetHealth() {

@@ -26,6 +26,7 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 		maxSkill = Skill;		
 	}
 
+	@Override
 	public int GetSkill() {
 		return Skill;
 	}
@@ -38,7 +39,6 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 	@Override
 	public void LoseHealth() {
 		Health -=3;
-		
 	}
 
 	@Override

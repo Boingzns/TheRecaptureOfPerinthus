@@ -1,6 +1,6 @@
-public class Stuf{
+public class InventoryItem{
 	
-	public Stuf(String name, String description)
+	public InventoryItem(String name, String description)
 	{
 		Name = name;
 		Description = description;

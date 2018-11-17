@@ -3,17 +3,17 @@ import java.util.Map;
 
 public class Inventory {
 	
-	Map<String, Stuf> allItems;
+	Map<String, InventoryItem> allItems;
 	
 	public Inventory() {
-		allItems = new HashMap<String, Stuf>();
+		allItems = new HashMap<String, InventoryItem>();
 	}
 	
-	public void StoreItem(Stuf newItem) {
+	public void StoreItem(InventoryItem newItem) {
 		allItems.put(newItem.Name, newItem);
 	}
 	
-	public Stuf GetItem(String name) {
+	public InventoryItem GetItem(String name) {
 		return allItems.get(name);
 	}
 }

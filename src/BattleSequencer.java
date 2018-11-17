@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class BattleSequencer implements Interfaces.IBattleSequencer {
+	
+	String[] attackPhrases = {
+			"attack1",
+			"attack2"};
 
 	public void Battle(Interfaces.IMainCharacter mainy, Interfaces.IEnemy enemy)
 	{
@@ -16,7 +20,8 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			
 			inputPlace.nextLine();
 			if(playersAttack > enemyAttack) {
-				System.out.println("hit! the enemy loses 3 health");
+				System.out.println(GetAttackPhrase());
+				System.out.println(" the enemy loses 3 health");
 				enemy.LoseHealth();
 			}
 			
@@ -38,5 +43,11 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			System.out.println("enemy vanquished");
 		}
 		inputPlace.close();
+	}
+	
+	private String GetAttackPhrase()
+	{
+		int phraseNumber = DiceRoller.AttackPhrasesNumber();
+		return attackPhrases[phraseNumber];
 	}
 }

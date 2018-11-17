@@ -46,4 +46,4 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 	public boolean IsDead() {
 		// TODO Auto-generated method stub
 		return false;
-	}
+	}}

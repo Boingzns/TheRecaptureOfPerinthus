@@ -3,8 +3,9 @@ import java.util.Scanner;
 public class BattleSequencer implements Interfaces.IBattleSequencer {
 	
 	String[] attackPhrases = {
-			"attack1",
-			"attack2"};
+			"Adrenaline roaring through your body, you dash to the side like an embodiment of Ventus’ own wind, darting forward once again to land two flying slashes across the abdomen of your attacker",
+			"They attempt to attack, but you easily block the weapon pillaging its path towards your abdomen, plunging the tip of your sword into their armpit in retaliation",
+			"You parry, and land a slicing blow across their front, sending darkened blood spurting out across the grey cobbled stones"};
 
 	public void Battle(Interfaces.IMainCharacter mainy, Interfaces.IEnemy enemy)
 	{
@@ -21,7 +22,7 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			inputPlace.nextLine();
 			if(playersAttack > enemyAttack) {
 				System.out.println(GetAttackPhrase());
-				System.out.println(" the enemy loses 3 health");
+				System.out.println("The enemy loses 3 health");
 				enemy.LoseHealth();
 			}
 			
@@ -31,7 +32,7 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			}
 			
 			else {
-				System.out.println("parry successful; no damage attained or given");
+				System.out.println("Parry successful; no damage attained or given");
 			}
 		}
 		
@@ -40,14 +41,14 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 		}
 		
 		if(enemy.IsDead()) {
-			System.out.println("enemy vanquished");
+			System.out.println("Enemy Vanquished");
 		}
 		inputPlace.close();
 	}
 	
 	private String GetAttackPhrase()
 	{
-		int phraseNumber = DiceRoller.AttackPhrasesNumber();
+		int phraseNumber = DiceRoller.AttackPhrasesNumber(attackPhrases.length);
 		return attackPhrases[phraseNumber];
 	}
 }

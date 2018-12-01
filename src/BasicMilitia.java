@@ -1,4 +1,4 @@
-public class SimpleEnemy implements Interfaces.IEnemy {
+public class BasicMilitia implements Interfaces.IEnemy {
 	private int Health = 5;
 	
 	public int GetSkill() {

@@ -2,7 +2,7 @@ public class ZeBaker implements Interfaces.IEnemy {
 	private int Health = 13;
 	
 	public int GetSkill() {
-		return 3;
+		return 4;
 	}
 
 	public int GetHealth() {
@@ -19,7 +19,8 @@ public class ZeBaker implements Interfaces.IEnemy {
 	
 	String[] hurtPhrases = {
 			"Croissaints fall upon you in formidable rains of danger from the firey burning oven situating in the corner of the hellish room, butter smearing across your sweaty, boiling skin as you face the morbidly obese frenchman before you. Each hit takes energy from your already ailing stock, and you tumble back towards the door",
-			"A distant whistling pierces your ears, and you turn towards the increasingly deafening sound. Instantaneously, with the force of a terrorising bolder, a baguette javelin slams into your helmet, pinning you to temporarily to the floor with its overwhelming momentum"
+			"A distant whistling pierces your ears, forcing you to turn towards the increasingly deafening sound. Instantaneously, with the force of a terrorising bolder, a baguette javelin slams into your helmet, pinning you to temporarily to the floor with its overwhelming momentum"
+			
 	};
 	
 	public String GetHurtPhrase()

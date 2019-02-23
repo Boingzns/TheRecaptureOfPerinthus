@@ -6,6 +6,7 @@ public class Interfaces {
 	}
 	
 	public interface IEnemy extends IPlayer{
+		String GetHurtPhrase();
 		
 	}
 	

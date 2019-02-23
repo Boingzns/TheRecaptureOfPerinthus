@@ -7,7 +7,11 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 	private int maxSkill = 0;
 	private int maxHealth = 0;
 	
+	private Inventory myThings;
+	
 	public MainCharacter() {
+		myThings = new Inventory();
+		myThings.storeItem("Top Hat");
 	}
 	
 	public void CreateStats() {
@@ -44,4 +48,12 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 	@Override
 	public boolean IsDead() {
 		return Health <= 0;
-	}}
+	}
+
+	@Override
+	public Inventory GetInventory() {
+		return myThings;
+	}
+	
+	
+}

@@ -16,4 +16,16 @@ public class Inventory {
 	public InventoryItem GetItem(String name) {
 		return allItems.get(name);
 	}
+	
+	public void InventoryList() {
+		for (String key : allItems.keySet())
+		{
+			InventoryItem item = allItems.get(key);
+			System.out.println(item.Name);
+			System.out.println(item.Description);
+			System.out.println(item.HealthBoost);
+			System.out.println(item.SkillBoost);
+		}
+	}
+	
 }

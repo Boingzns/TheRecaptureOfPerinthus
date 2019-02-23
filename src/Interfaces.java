@@ -2,9 +2,11 @@
 public class Interfaces {
 	public interface IMainCharacter extends IPlayer{
 		void CreateStats();
+		Inventory GetInventory();
 	}
 	
 	public interface IEnemy extends IPlayer{
+		String GetHurtPhrase();
 		
 	}
 	

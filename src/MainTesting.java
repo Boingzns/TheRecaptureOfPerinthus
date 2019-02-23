@@ -2,15 +2,12 @@
 public class MainTesting {
 
 	public static void main(String[] args) {
-		Inventory myThings = new Inventory();
+		BattleSequencer fighter = new BattleSequencer();
+		MainCharacter mainPerson = new MainCharacter();
+		mainPerson.CreateStats();
+		ZeBaker enemy = new ZeBaker();
 		
-		myThings.StoreItem(new InventoryItem("Sword Of Destiny", "its like a sword, but for destinies"));
-		
-		InventoryItem swordOfDestiny = myThings.GetItem("Sword Of Destiny");
-		
-		
-		System.out.println(swordOfDestiny.Name);
-		System.out.println(swordOfDestiny.Description);
+		fighter.Battle(mainPerson, enemy);
 	}
 
 }

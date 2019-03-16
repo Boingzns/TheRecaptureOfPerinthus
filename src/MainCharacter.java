@@ -11,7 +11,6 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 	
 	public MainCharacter() {
 		myThings = new Inventory();
-		myThings.storeItem("Top Hat");
 	}
 	
 	public void CreateStats() {

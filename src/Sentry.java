@@ -16,4 +16,8 @@ public class Sentry implements Interfaces.IEnemy {
 	public boolean IsDead() {
 		return Health <= 0;
 	}
+
+	public String GetHurtPhrase() {
+		return "AHHHHAHAHAHAHAHHAHA";
+	}
 }

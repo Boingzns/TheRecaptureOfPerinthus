@@ -12,7 +12,6 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 	public MainCharacter() {
 		myThings = new Inventory();
 		myThings.StoreItem(Items.OPSword);
-		myThings.StoreItem(new Items.Potion());
 	}
 	
 	public void CreateStats() {

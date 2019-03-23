@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class Inventory {
 	
-	Map<String, InventoryItem> allItems;
+	HashMap<String, InventoryItem> allItems;
 	
 	public Inventory() {
 		allItems = new HashMap<String, InventoryItem>();
@@ -28,4 +28,25 @@ public class Inventory {
 		}
 	}
 	
+	public int GetEquippedSkillBoost()
+	{
+		int totalItemSkillBoost = 0;
+		for (String key : allItems.keySet())
+		{
+			InventoryItem item = allItems.get(key);
+			totalItemSkillBoost += item.SkillBoost;
+		}
+		return totalItemSkillBoost;	
+	}
+	
+	public int GetEquippedHealthBoost()
+	{
+		int totalItemHealthBoost = 0;
+		for (String key : allItems.keySet())
+		{
+			InventoryItem item = allItems.get(key);
+			totalItemHealthBoost += item.HealthBoost;
+		}
+		return totalItemHealthBoost;	
+	}
 }

@@ -11,6 +11,8 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 	
 	public MainCharacter() {
 		myThings = new Inventory();
+		myThings.StoreItem(Items.OPSword);
+		myThings.StoreItem(new Items.Potion());
 	}
 	
 	public void CreateStats() {
@@ -29,22 +31,20 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 		maxSkill = Skill;		
 	}
 
-	@Override
 	public int GetSkill() {
-		return Skill;
+		int modified_skill = Skill + myThings.GetEquippedSkillBoost();
+		return modified_skill;
 	}
 
-	@Override
 	public int GetHealth() {
-		return Health;
+		int modified_health = Health + myThings.GetEquippedHealthBoost();
+		return modified_health;
 	}
 
-	@Override
 	public void LoseHealth() {
 		Health -=3;
 	}
 
-	@Override
 	public boolean IsDead() {
 		return Health <= 0;
 	}

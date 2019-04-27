@@ -4,9 +4,7 @@ public class Main {
 
 	private static MainCharacter protagonist;
 	
-	public static void main(String[] args) {
-		Scanner input = new Scanner (System.in);
-		
+	public static void main(String[] args) {		
 		
 		protagonist = new MainCharacter();
 		protagonist.CreateStats(); 

@@ -23,7 +23,7 @@ public class Part_1 {
 			
 		public static void Impersonatefarmer() {
 			System.out.println("You put on a disguise to enter the castle, without angering the guards");
-			System.out.println("You aproach the entrance dressed like a servant of the general, seeking entrance");
+			System.out.println("You aproach the entrance dressed like a servant of the general");
 			System.out.println("One of the guards confronts you 5 metres infront of the aperture, an inexperienced militia conscripted only for the war");
 			System.out.println("He tells you that the gate is closed and to turn around before he takes you into custody");
 			

@@ -10,8 +10,8 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			"Turning quickly on the balls of your feet, you lunge towards them in a daring thrust, piercing their chest before rapidly retreating to a safer position",
 			"A quick block opens up an opportunity to press the offensive, allowing you to smash the top of your opponent's head with your pommel, dazing them as you slash across their front with the tip of your sword"};
 	
-	public BattleSequencer() {
-		inputPlace = new Scanner(System.in);
+	public BattleSequencer(Scanner input) {
+		inputPlace = input;
 	}
 	
 	public void Battle(Interfaces.IMainCharacter mainy, Interfaces.IEnemy[] enemies) {

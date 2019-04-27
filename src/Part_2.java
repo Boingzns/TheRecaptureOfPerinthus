@@ -5,8 +5,8 @@ public class Part_2 {
 	static BattleSequencer battler;
 
 	public static void Approach_the_Castle(MainCharacter mainy) {
-		battler = new BattleSequencer();
 		Scanner input = new Scanner (System.in);
+		battler = new BattleSequencer(input);
 
 		System.out.println("Having infiltrated the city, you now head for the castle");
 		System.out.println("Scanning the area for possible entries, you come up with some ideas");

@@ -6,8 +6,8 @@ public class Part_1 {
 	static Scanner input;
 
 	public static void Approach_the_Castle(MainCharacter mainy) {
-		battler = new BattleSequencer();
 		input = new Scanner (System.in);
+		battler = new BattleSequencer(input);
 		
 		System.out.println("The burned castle lays before you, its once greatness ruined to the scars of war.");
 		System.out.println("the general lies within.");

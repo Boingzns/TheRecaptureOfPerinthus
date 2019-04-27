@@ -7,7 +7,7 @@ public class Interfaces {
 	
 	public interface IEnemy extends IPlayer{
 		String GetHurtPhrase();
-		
+		String GetName();
 	}
 	
 	public interface IPlayer{
@@ -18,6 +18,7 @@ public class Interfaces {
 	}
 	
 	public interface IBattleSequencer{
+		void Battle(IMainCharacter main, IEnemy[] enemies) throws InterruptedException;
 		void Battle(IMainCharacter main, IEnemy enemy) throws InterruptedException;
 	}
 }

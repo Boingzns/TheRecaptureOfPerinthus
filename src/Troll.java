@@ -25,7 +25,9 @@ public class Troll implements Interfaces.IEnemy {
 	{
 		int phraseNumber = DiceRoller.GeneratePhraseIndex(hurtPhrases.length);
 		return hurtPhrases[phraseNumber];
-		
+	}
+	public String GetName() {
+		return "Troll";
 	}
 	
 }

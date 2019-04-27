@@ -28,6 +28,9 @@ public class Dragon implements Interfaces.IEnemy {
 		return hurtPhrases[phraseNumber];
 		
 	}
+	public String GetName() {
+		return "Dragon";
+	}
 	
 }
 

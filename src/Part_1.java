@@ -31,13 +31,15 @@ public class Part_1 {
 		}
 		
 
-		private static void FightGateGuards(MainCharacter protagonist, int numGuards) {
-			while (numGuards > 0) {
-				BasicMilitia guard = new BasicMilitia();
-				battler.Battle(protagonist, guard);
-				numGuards --;
-			}
-			
+		private static void FightGateGuards(MainCharacter protagonist) {
+			BasicMilitia[] guards = {
+					new BasicMilitia(),
+					new BasicMilitia(),
+					new BasicMilitia(),
+					new BasicMilitia(),
+					new BasicMilitia()
+			};
+			battler.Battle(protagonist, guards);
 		}
 
 		private static void LookAroundFindSewer() {
@@ -59,7 +61,7 @@ public class Part_1 {
 			}	
 				
 			else if (theirChoice2.equals("B")) {
-				FightGateGuards(mainCharacter, 4);
+				FightGateGuards(mainCharacter);
 			}
 				
 			else if (theirChoice2.equals("C")) {
@@ -73,7 +75,7 @@ public class Part_1 {
 			String theirChoice3 = input.nextLine();
 			
 			if (theirChoice3.equals("A")) {
-				FightGateGuards(mainCharacter, 4);
+				FightGateGuards(mainCharacter);
 			}
 				
 			
@@ -100,7 +102,7 @@ public class Part_1 {
 			}
 			
 			else if (firstChoice.equals("C")) {
-				FightGateGuards(mainCharacter, 5);
+				FightGateGuards(mainCharacter);
 			}
 		}
 }

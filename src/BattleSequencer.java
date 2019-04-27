@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class BattleSequencer implements Interfaces.IBattleSequencer {
+	Scanner inputPlace;
 	
 	String[] attackPhrases = {
 			"Adrenaline roaring through your body, you dash to the side like an embodiment of Ventus’ own wind, darting forward once again to land two flying slashes across the abdomen of your attacker",
@@ -9,10 +10,24 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			"Turning quickly on the balls of your feet, you lunge towards them in a daring thrust, piercing their chest before rapidly retreating to a safer position",
 			"A quick block opens up an opportunity to press the offensive, allowing you to smash the top of your opponent's head with your pommel, dazing them as you slash across their front with the tip of your sword"};
 	
-	public void Battle(Interfaces.IMainCharacter mainy, Interfaces.IEnemy enemy)
-	{
-		Scanner inputPlace = new Scanner (System.in);
-		System.out.println("battle engaged");
+	public BattleSequencer() {
+		inputPlace = new Scanner(System.in);
+	}
+	
+	public void Battle(Interfaces.IMainCharacter mainy, Interfaces.IEnemy[] enemies) {
+		int numEnemies = enemies.length;
+		int i = 0;
+		System.out.println("battle engaged with " + numEnemies + " enemies");
+		while (i < numEnemies) {
+			Battle(mainy, enemies[i]);
+			i++;
+			System.out.println(numEnemies - i + " foes remain");
+		}	
+		System.out.println("all foes defeated, the gods have chosen their victor, congratulations to you: servant of virconium");
+	}
+	
+	public void Battle(Interfaces.IMainCharacter mainy, Interfaces.IEnemy enemy) {
+		System.out.println(enemy.GetName() + " approaches");
 		while (!mainy.IsDead() && !enemy.IsDead()) {
 			// each roll dice Once
 			int playersAttack = DiceRoller.RollDice() + mainy.GetSkill();
@@ -25,7 +40,6 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			try {
 				inputPlace.nextLine();
 			} catch (Exception e) {
-				
 			}
 			
 			if(playersAttack > enemyAttack) {
@@ -34,7 +48,7 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 				enemy.LoseHealth();
 			}
 			
-			else if(playersAttack < enemyAttack){
+			else if(playersAttack < enemyAttack) {
 				System.out.println(enemy.GetHurtPhrase());
 				System.out.println("You lose 3 health");
 				mainy.LoseHealth();
@@ -43,22 +57,19 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			else {
 				System.out.println("No damage attained or given");
 			}
+			
+			if(mainy.IsDead()) {
+				System.out.println("Game Over");
+			}
+			
+			if(enemy.IsDead()) {
+				System.out.println("Enemy Vanquished");
+			}
 		}
-		
-		if(mainy.IsDead()) {
-			System.out.println("Game Over");
-		}
-		
-		if(enemy.IsDead()) {
-			System.out.println("Enemy Vanquished");
-		}
-		inputPlace.close();
 	}
 	
-	private String GetAttackPhrase()
-	{
+	private String GetAttackPhrase() {
 		int phraseNumber = DiceRoller.GeneratePhraseIndex(attackPhrases.length);
 		return attackPhrases[phraseNumber];
 	}
-	
 }

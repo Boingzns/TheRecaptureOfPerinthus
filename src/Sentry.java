@@ -20,4 +20,8 @@ public class Sentry implements Interfaces.IEnemy {
 	public String GetHurtPhrase() {
 		return "AHHHHAHAHAHAHAHHAHA";
 	}
+
+	public String GetName() {
+		return "Sentry";
+	}
 }

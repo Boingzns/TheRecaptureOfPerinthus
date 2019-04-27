@@ -29,4 +29,8 @@ public class BasicMilitia implements Interfaces.IEnemy {
 		return hurtPhrases[phraseNumber];
 		
 	}
+	
+	public String GetName() {
+		return "Militia Man";
+	}
 }

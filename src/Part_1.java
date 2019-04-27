@@ -5,13 +5,13 @@ public class Part_1 {
 	static BattleSequencer battler;
 	static Scanner input;
 
-	public static void Approach_the_City(MainCharacter mainy) {
+	public static void Approach_the_Castle(MainCharacter mainy) {
 		battler = new BattleSequencer();
 		input = new Scanner (System.in);
 		
-		System.out.println("The burned city lays before you, its once greatness ruined to the scars of war.");
-		System.out.println("the general lies within the castle, but first you need to penetrate the walled city.");
-		System.out.println("Due to the recent capture the city is in lockdown and guards patrol the perimeter wall and the gates;");
+		System.out.println("The burned castle lays before you, its once greatness ruined to the scars of war.");
+		System.out.println("the general lies within.");
+		System.out.println("Due to the recent capture the city the castle is in lockdown and guards patrol the great walls;");
 		
 		input.nextLine();
 		
@@ -22,8 +22,8 @@ public class Part_1 {
 		}
 			
 		public static void Impersonatefarmer() {
-			System.out.println("You put on your rags and straw hat that you keep for times when anonimity is required for your tasks,");
-			System.out.println("You aproach the entrance playing the part of the old farmer with a crooked back; the gate seems strangely sparse of civilians");
+			System.out.println("You put on a disguise to enter the castle, without angering the guards");
+			System.out.println("You aproach the entrance dressed like a servant of the general, seeking entrance");
 			System.out.println("One of the guards confronts you 5 metres infront of the aperture, an inexperienced militia conscripted only for the war");
 			System.out.println("He tells you that the gate is closed and to turn around before he takes you into custody");
 			
@@ -31,15 +31,13 @@ public class Part_1 {
 		}
 		
 
-		private static void FightGateGuards(MainCharacter protagonist) {
-			BasicMilitia[] guards = {
-					new BasicMilitia(),
-					new BasicMilitia(),
-					new BasicMilitia(),
-					new BasicMilitia(),
-					new BasicMilitia()
-			};
-			battler.Battle(protagonist, guards);
+		private static void FightGateGuards(MainCharacter protagonist, int numGuards) {
+			while (numGuards > 0) {
+				BasicMilitia guard = new BasicMilitia();
+				battler.Battle(protagonist, guard);
+				numGuards --;
+			}
+			
 		}
 
 		private static void LookAroundFindSewer() {
@@ -47,21 +45,21 @@ public class Part_1 {
 		}
 		
 		private static void Choice2Bit(MainCharacter mainCharacter) {
-			System.out.println("Will you: A) try to persuade the militia of your need to enter the city");
+			System.out.println("Will you: A) try to persuade the guard of your need to enter the castle");
 			System.out.println("B) fight your way through");
-			System.out.println("C) walk away from the gate and look for an alternative way into the city");
+			System.out.println("C) walk away from the gate and look for an alternative way into the castle");
 			String theirChoice2 = input.nextLine();
 			if (theirChoice2.equals("A")) {
-				System.out.println("you tell the guard of how your village was burned down by brigands and your family killed");
-				System.out.println("and you plead for him to let you seek refuge in the city so you can pray at the grand temple");
-				System.out.println("The guard looks at you with the same hard stern and tells you to beat it before he draws his sword");
+				System.out.println("you tell the guard how you need to enter the castle to pleasure your master, the comatose general");
+				System.out.println("His eyebrows raise in surprise as he stutters, '..oh, my meeestake of course you can enter'");
+				System.out.println("You thank him and hop back into your tank to contiune on your way");
 				
 				input.nextLine();
 				Choice3Bit(mainCharacter);
 			}	
 				
 			else if (theirChoice2.equals("B")) {
-				FightGateGuards(mainCharacter);
+				FightGateGuards(mainCharacter, 4);
 			}
 				
 			else if (theirChoice2.equals("C")) {
@@ -75,7 +73,7 @@ public class Part_1 {
 			String theirChoice3 = input.nextLine();
 			
 			if (theirChoice3.equals("A")) {
-				FightGateGuards(mainCharacter);
+				FightGateGuards(mainCharacter, 4);
 			}
 				
 			
@@ -87,7 +85,7 @@ public class Part_1 {
 		
 		private static void Choice1Bit(MainCharacter mainCharacter) {
 			System.out.println("Will you: A) Start to circle the wall searching for an alternative way in");
-			System.out.println(" B) Impersonate a farmer trying to seek refuge in the city");
+			System.out.println(" B) Impersonate a servant trying to seek refuge in the city");
 			System.out.println(" C) Try and take out the guards at an entrance to force your way through");
 			String firstChoice = input.nextLine();
 			
@@ -97,12 +95,11 @@ public class Part_1 {
 
 			else if (firstChoice.equals("B")) {
 				Impersonatefarmer();
-				
 				Choice2Bit(mainCharacter);
 			}
 			
 			else if (firstChoice.equals("C")) {
-				FightGateGuards(mainCharacter);
+				FightGateGuards(mainCharacter, 5);
 			}
 		}
 }

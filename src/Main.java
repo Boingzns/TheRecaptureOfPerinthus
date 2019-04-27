@@ -10,7 +10,7 @@ public class Main {
 		protagonist.CreateStats(); 
 		
 		
-		Part_1.Approach_the_City(protagonist);
+		Part_1.Approach_the_Castle(protagonist);
 							
 	}
 }

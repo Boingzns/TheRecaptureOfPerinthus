@@ -23,16 +23,7 @@ public class Part_1 {
 			}
 
 			else if (theirChoice.equals("B")) {
-				System.out.println("You put on your rags and straw hat that you keep for times when anonimity is required for your tasks,");
-				System.out.println("You aproach the entrance playing the part of the old farmer with a crooked back; the gate seems strangely sparse of civilians");
-				System.out.println("One of the guards confronts you 5 metres infront of the aperture, an inexperienced militia conscripted only for the war");
-				System.out.println("He tells you that the gate is closed and to turn around before he takes you into custody");
-				
-				input.nextLine();
-				System.out.println("Will you: A) try to persuade the militia of your need to enter the city");
-				System.out.println("B) fight your way through");
-				System.out.println("C) walk away from the gate and look for an alternative way into the city");
-				String theirChoice2 = input.nextLine();
+				Impersonatefarmer()
 				
 				if (theirChoice2.equals("A")) {
 					System.out.println("you tell the guard of how your village was burned down by brigands and your family killed");
@@ -47,12 +38,12 @@ public class Part_1 {
 					if (theirChoice3.equals("A")) {
 						FightGateGuards(mainy, 4);
 						
-					}
+					
 					
 					else if (theirChoice3.equals("B")) {
 						LookAroundFindSewer();
 					}
-				}
+				}	
 					
 				else if (theirChoice2.equals("B")) {
 					FightGateGuards(mainy, 4);
@@ -66,10 +57,24 @@ public class Part_1 {
 			}
 			
 			else if (theirChoice.equals("C")) {
-				FightGateGuards(mainy, 5);
+				FightGateGuards(mainy, 5);}
 			}
-				input.close();				
-		}
+			
+			public static void Impersonatefarmer() {
+			System.out.println("You put on your rags and straw hat that you keep for times when anonimity is required for your tasks,");
+			System.out.println("You aproach the entrance playing the part of the old farmer with a crooked back; the gate seems strangely sparse of civilians");
+			System.out.println("One of the guards confronts you 5 metres infront of the aperture, an inexperienced militia conscripted only for the war");
+			System.out.println("He tells you that the gate is closed and to turn around before he takes you into custody");
+			
+			input.nextLine();
+			System.out.println("Will you: A) try to persuade the militia of your need to enter the city");
+			System.out.println("B) fight your way through");
+			System.out.println("C) walk away from the gate and look for an alternative way into the city");
+			String theirChoice2 = input.nextLine();
+			}
+			
+			input.close();				
+		
 
 		private static void FightGateGuards(MainCharacter protagonist, int numGuards) {
 			
@@ -81,9 +86,37 @@ public class Part_1 {
 			
 		}
 
-		private static void LookAroundFindSewer() {
-			System.out.println("");
+		public static void LookAroundFindSewer() {
+			System.out.println("ooh sewer really classy");
 	}
-	
-		
+			
+}
+
+
+
+    
+    if nextChoice == A:
+        TryToPersuade() # either fail or continue
+        
+        finalChoice = getInput()
+        if finalChoice == A:
+        	
+            LookForWeapons()
+        if finalChoice == B:
+            LookForSupplies()
+            
+    else if nextChoice == B:
+        FightYourWayThrough() # you just die?
+    else if nextChoice == C:
+    	
+        WalkAwaySearchForAnotherRoute()
+        HideFromSoldiersAndGoThroughSewer() #goes to part two in here
+
+    FightYourWayThrough() # you just die or goes to 
+
+
+all the other functions are hidden away down here
+
+private void TryToPersuade() {
+    print(some persuady boi)
 }

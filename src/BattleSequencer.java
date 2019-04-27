@@ -1,7 +1,5 @@
-import java.util.Scanner;
-
 public class BattleSequencer implements Interfaces.IBattleSequencer {
-	Scanner inputPlace;
+	KindInputTaker inputPlace;
 	
 	String[] attackPhrases = {
 			"Adrenaline roaring through your body, you dash to the side like an embodiment of Ventus’ own wind, darting forward once again to land two flying slashes across the abdomen of your attacker",
@@ -10,7 +8,7 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			"Turning quickly on the balls of your feet, you lunge towards them in a daring thrust, piercing their chest before rapidly retreating to a safer position",
 			"A quick block opens up an opportunity to press the offensive, allowing you to smash the top of your opponent's head with your pommel, dazing them as you slash across their front with the tip of your sword"};
 	
-	public BattleSequencer(Scanner input) {
+	public BattleSequencer(KindInputTaker input) {
 		inputPlace = input;
 	}
 	
@@ -38,7 +36,7 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			
 			//wait for user enter
 			try {
-				inputPlace.nextLine();
+				inputPlace.PressEnterToContinue();
 			} catch (Exception e) {
 			}
 			

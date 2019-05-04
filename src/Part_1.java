@@ -40,7 +40,8 @@ public class Part_1 {
 		}
 
 		private static void LookAroundFindSewer() {
-			System.out.println("Searching round the side of the grand, dilapidated castle you find Zeb's home.");
+			System.out.println("Searching round the side of the grand, dilapidated castle you find a discrete opening in the street.");
+			System.out.println("Cautiously making sure that no-one is watching, you proceed down some darkened, rotting rungs into the dank subterrenean world of the sewers");
 			System.out.println("Proceeding forth into the sewer, you hold your nose as the smell forces violent retching from your body, your stomach toiling in the overwhelming harshness of the muck.");
 			System.out.println("You realise that if you stay here much longer, you may be horribly ill, and scarper down the underground passages further");
 		}

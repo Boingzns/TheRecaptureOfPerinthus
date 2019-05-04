@@ -22,12 +22,13 @@ public class KindInputTaker{
 		// random input -> another chance , go again
 		
 		
-		return whatTheyWrote;
+		return whatTheyWrote.toUpperCase();
 		
 	}
 	
 	private boolean AcceptableInput(String whatTheyWrote) {
 		// return true if its good "A" or "B" or "C"
+		whatTheyWrote = whatTheyWrote.toUpperCase();
 		if (whatTheyWrote.equals("A") || whatTheyWrote.equals("B") || whatTheyWrote.equals("C"))
 			return true;
 		// return false if its not good

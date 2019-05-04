@@ -46,9 +46,9 @@ public class Part_1 {
 		}
 		
 		private static void Choice2Bit(MainCharacter mainCharacter) {
-			System.out.println("Will you: A) try to persuade the guard of your need to enter the castle");
-			System.out.println("B) fight your way through");
-			System.out.println("C) walk away from the gate and look for an alternative way into the castle");
+			System.out.println("Will you: \n A) try to persuade the guard of your need to enter the castle");
+			System.out.println(" B) fight your way through");
+			System.out.println(" C) walk away from the gate and look for an alternative way into the castle");
 			String theirChoice2 = input.GetChoice();
 			if (theirChoice2.equals("A")) {
 				System.out.println("you tell the guard how you need to enter the castle to pleasure your master, the comatose general");
@@ -85,7 +85,7 @@ public class Part_1 {
 		}
 		
 		private static void Choice1Bit(MainCharacter mainCharacter) {
-			System.out.println("Will you: A) Start to circle the wall searching for an alternative way in");
+			System.out.println("Will you: \n A) Start to circle the wall searching for an alternative way in");
 			System.out.println(" B) Impersonate a servant trying to seek refuge in the city");
 			System.out.println(" C) Try and take out the guards at an entrance to force your way through");
 			String firstChoice = input.GetChoice();

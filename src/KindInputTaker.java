@@ -15,7 +15,7 @@ public class KindInputTaker{
 		{
 			System.out.println("Try again");
 			whatTheyWrote = scanner.nextLine();
-		};
+		}
 
 		// lower and upper case => should both work
 		// empty input (space or whatever) -> should do it again

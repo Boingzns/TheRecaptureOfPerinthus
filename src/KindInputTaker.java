@@ -10,10 +10,10 @@ public class KindInputTaker{
 		
 		String whatTheyWrote = scanner.nextLine();
 		
-		while (whatTheyWrote.length() != 1 
-				&& (itsNotA B or C)) {
-			System.out.println("Try again");
-			whatTheyWrote = scanner.nextLine();
+		while (whatTheyWrote.length() != 1 )
+				if ( whatTheyWrote.equals(null)) {
+					System.out.println("Try again");
+					whatTheyWrote = scanner.nextLine();
 		};
 
 		// lower and upper case => should both work

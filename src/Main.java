@@ -9,7 +9,6 @@ public class Main {
 		protagonist = new MainCharacter();
 		protagonist.CreateStats(); 
 		
-		
 		Part_1.Approach_the_Castle(protagonist);
 							
 	}

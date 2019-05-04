@@ -22,8 +22,8 @@ public class Part_1 {
 		}
 			
 		public static void Impersonatefarmer() {
-			System.out.println("You put on a disguise to enter the castle, without angering the guards");
-			System.out.println("You aproach the entrance dressed like a servant of the general");
+			System.out.println("You put on a disguise in an attempt to discretely enter the castle without aggravating the obviously sleep deprived, aggressive guards");
+			System.out.println("You approach the entrance dressed like a servant of the general");
 			System.out.println("One of the guards confronts you 5 metres infront of the aperture, an inexperienced militia conscripted only for the war");
 			System.out.println("He tells you that the gate is closed and to turn around before he takes you into custody");
 			
@@ -40,9 +40,10 @@ public class Part_1 {
 		}
 
 		private static void LookAroundFindSewer() {
-			System.out.println("Searching round the side of the grand, dilapidated castle you find Zeb's home.");
-			System.out.println("Proceeding forth into the sewer, you hold your nose as the smell forces violent retching from your body, your stomach toiling in the overwhelming harshness of the muck.");
-			System.out.println("You realise that if you stay here much longer, you may be horribly ill, and scarper down the underground passages further");
+			System.out.println("Searching round the side of the grand, dilapidated castle you find a discrete opening in the street.");
+			System.out.println("Cautiously making sure that no-one is watching, you proceed down some darkened, rotting rungs into the dank subterrenean world of the sewers");
+			System.out.println("Proceeding forth into the tunnels, you hold your nose as the smell forces violent retching from your body, your stomach toiling in the overwhelming harshness of the muck.");
+			System.out.println("Fearing tempramental illness that could upset your mission you hasten your scarpering down the underground passages further");
 		}
 		
 		private static void Choice2Bit(MainCharacter mainCharacter) {
@@ -53,7 +54,7 @@ public class Part_1 {
 			if (theirChoice2.equals("A")) {
 				System.out.println("you tell the guard how you need to enter the castle to pleasure your master, the comatose general");
 				System.out.println("His eyebrows raise in surprise as he stutters, '..oh, my meeestake of course you can enter'");
-				System.out.println("You thank him and hop back into your tank to contiune on your way");
+				System.out.println("You thank him and hop back into your tank to continue on your way");
 				
 				input.PressEnterToContinue();
 				Choice3Bit(mainCharacter);

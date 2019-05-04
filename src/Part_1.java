@@ -22,8 +22,8 @@ public class Part_1 {
 		}
 			
 		public static void Impersonatefarmer() {
-			System.out.println("You put on a disguise to enter the castle, without angering the guards");
-			System.out.println("You aproach the entrance dressed like a servant of the general");
+			System.out.println("You put on a disguise in an attempt to discretely enter the castle without aggravating the obviously sleep deprived, aggressive guards");
+			System.out.println("You approach the entrance dressed like a servant of the general");
 			System.out.println("One of the guards confronts you 5 metres infront of the aperture, an inexperienced militia conscripted only for the war");
 			System.out.println("He tells you that the gate is closed and to turn around before he takes you into custody");
 			
@@ -54,7 +54,7 @@ public class Part_1 {
 			if (theirChoice2.equals("A")) {
 				System.out.println("you tell the guard how you need to enter the castle to pleasure your master, the comatose general");
 				System.out.println("His eyebrows raise in surprise as he stutters, '..oh, my meeestake of course you can enter'");
-				System.out.println("You thank him and hop back into your tank to contiune on your way");
+				System.out.println("You thank him and hop back into your tank to continue on your way");
 				
 				input.PressEnterToContinue();
 				Choice3Bit(mainCharacter);

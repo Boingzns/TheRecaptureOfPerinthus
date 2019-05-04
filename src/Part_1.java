@@ -100,6 +100,8 @@ public class Part_1 {
 			
 			else if (firstChoice.equals("C")) {
 				FightGateGuards(mainCharacter, 5);
+				mainCharacter.GetInventory().StoreItem(Items.LeatherArmour);
+				System.out.println("CoNgrATulaTionS You have aquired some crappy leather armour");
 			}
 		}
 }

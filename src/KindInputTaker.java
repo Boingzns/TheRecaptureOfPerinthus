@@ -35,6 +35,7 @@ public class KindInputTaker{
 	}
 
 	public void PressEnterToContinue() {
+		System.out.println("Press enter to continue");
 		scanner.nextLine();
 	}
 	

@@ -62,7 +62,7 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			}
 			
 			if(enemy.IsDead()) {
-				System.out.println("Enemy Vanquished");
+				System.out.println("Enemy Vanquished \n ");
 			}
 		}
 	}

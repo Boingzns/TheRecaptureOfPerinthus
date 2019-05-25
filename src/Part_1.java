@@ -91,7 +91,6 @@ public class Part_1 {
 		System.out.println(" C) Try and take out the guards at an entrance to force your way through");
 		String firstChoice = input.GetChoice();
 		
-<<<<<<< HEAD
 		if (firstChoice.equals("A")) {
 			LookAroundFindSewer();
 		}
@@ -119,30 +118,6 @@ public class Part_1 {
 			System.out.println("the place is filled with guards who spot you instantly");
 			System.out.println("Your adventure ends here.");
 
-
-=======
-		private static void Choice1Bit(MainCharacter mainCharacter) {
-			System.out.println("Will you: \n A) Start to circle the wall searching for an alternative way in");
-			System.out.println(" B) Impersonate a servant trying to seek refuge in the city");
-			System.out.println(" C) Try and take out the guards at an entrance to force your way through");
-			String firstChoice = input.GetChoice();
-			
-			if (firstChoice.equals("A")) {
-				LookAroundFindSewer();
-			}
-
-			else if (firstChoice.equals("B")) {
-				Impersonatefarmer();
-				Choice2Bit(mainCharacter);
-			}
-			
-			else if (firstChoice.equals("C")) {
-				FightGateGuards(mainCharacter, 5);
-				mainCharacter.GetInventory().StoreItem(Items.LeatherArmour);
-				System.out.println("CoNgrATulaTionS You have aquired some crappy leather armour");
-				
-			}
->>>>>>> 2b6f80335ac782077b4e9d6df7181a7bd9735bee
 		}
 		else if (fourthChoice.equals("B")) {
 			GetReadyForPartTwo();

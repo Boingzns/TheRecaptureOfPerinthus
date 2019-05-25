@@ -7,22 +7,26 @@ public class Part_2 {
 		KindInputTaker input = new KindInputTaker();
 		battler = new BattleSequencer(input);
 
-<<<<<<< HEAD
+
 		System.out.println("Having infiltrated the castle, you now head for the keep");
 		System.out.println("Scanning the area for possible entries, you come up with some ideas");
-=======
-		System.out.println("Having infiltrated the castle you begin to make your way into its heart in search of your mark");
-		System.out.println("you reach a junction in the corridor and before you can chose a direction you hear approaching footsteps");
->>>>>>> bba3d5505f4139843c586e3bb989e8b85cd29af0
-		
 		input.PressEnterToContinue();
-		System.out.println("Will you: A) take the left path down the stairs");
-		System.out.println(" B) take the right continuing onto another corridor");
-		System.out.println(" C) hide and see who is approaching");
-		String theirChoice = input.GetChoice();
+		System.out.println("Will you A) head to the banqueting hall and ajoining kitchens");
+		System.out.println(" B) head into the myriad of corridors that make up the lower parts of the keep");
+		System.out.println(" C) investigate the commotion at the gates");
+		String theirChoice.equals
 		
-		if (theirChoice.equals("A")) {
-			LookAroundFindCastleSewer();
+			if (theirChoice.equals("B")) {
+			System.out.println("Having infiltrated the castle itself you begin to make your way into its heart in search of your mark");
+			System.out.println("you reach a junction in the corridor and before you can chose a direction you hear approaching footsteps");
+			input.PressEnterToContinue();
+			System.out.println("Will you: A) take the left path down the stairs");
+			System.out.println(" B) take the right continuing onto another corridor");
+			System.out.println(" C) hide and see who is approaching");
+			String theirChoice = input.GetChoice();
+			
+			if (theirChoice.equals("A")) {
+				LookAroundFindCastleSewer();
 		}
 		
 	}

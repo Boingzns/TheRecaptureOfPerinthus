@@ -120,6 +120,8 @@ public class Part_1 {
 			System.out.println("upon following them inside you realise your mistake");
 			System.out.println("the place is filled with guards who spot you instantly");
 			System.out.println("Your adventure ends here.");
+			ded();
+			
 
 		}
 		else if (fourthChoice.equals("B")) {
@@ -134,4 +136,8 @@ public class Part_1 {
 		input.PressEnterToContinue();
 		Part_2.The_Keep(mainCharacter);
 	}
-}
+	
+	public static void ded() {
+		Dead.ded(mainCharacter);
+
+	}}

@@ -37,6 +37,9 @@ public class Part_1 {
 			battler.Battle(mainCharacter, guard);
 			numGuards --;
 		}
+		mainCharacter.GetInventory().StoreItem(Items.LeatherArmour);
+		System.out.println("CoNgrATulaTionS You have aquired some crappy leather armour");
+		GetReadyForPartTwo();
 	}
 
 	private static void LookAroundFindSewer() {
@@ -104,8 +107,6 @@ public class Part_1 {
 		
 		else if (firstChoice.equals("C")) {
 			FightGateGuards(5);
-			mainCharacter.GetInventory().StoreItem(Items.LeatherArmour);
-			System.out.println("CoNgrATulaTionS You have aquired some crappy leather armour");
 		}
 	}		
 	

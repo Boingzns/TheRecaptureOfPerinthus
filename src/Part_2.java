@@ -8,8 +8,7 @@ public class Part_2 {
 		battler = new BattleSequencer(input);
 
 
-		System.out.println("Having infiltrated the castle, you now head for the keep");
-		System.out.println("Scanning the area for possible entries, you come up with some ideas");
+		System.out.println("Scanning the crumbling courtyard for possible entries, you come up with some ideas");
 		input.PressEnterToContinue();
 		System.out.println("Will you A) head to the banqueting hall and ajoining kitchens");
 		System.out.println(" B) head into the myriad of corridors that make up the lower parts of the keep");

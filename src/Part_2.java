@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class Part_2 {
 
@@ -8,13 +7,13 @@ public class Part_2 {
 		KindInputTaker input = new KindInputTaker();
 		battler = new BattleSequencer(input);
 
-		System.out.println("Having infiltrated the castle, you now head for the castle");
-		System.out.println("Scanning the area for possible entries, you come up with some ideas");
+		System.out.println("Having infiltrated the castle you begin to make your way into its heart in search of your mark");
+		System.out.println("you reach a junction in the corridor and before you can chose a direction you hear approaching footsteps");
 		
 		input.PressEnterToContinue();
-		System.out.println("Will you: A) Head to the sewer network to try and get under the walls");
-		System.out.println(" B) Impersonate a servant returning from the market");
-		System.out.println(" C) Try and take out the guards at an entrance to force your way through");
+		System.out.println("Will you: A) take the left path down the stairs");
+		System.out.println(" B) take the right continuing onto another corridor");
+		System.out.println(" C) hide and see who is approaching");
 		String theirChoice = input.GetChoice();
 		
 		if (theirChoice.equals("A")) {

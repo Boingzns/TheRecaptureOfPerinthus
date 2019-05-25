@@ -102,6 +102,7 @@ public class Part_1 {
 				FightGateGuards(mainCharacter, 5);
 				mainCharacter.GetInventory().StoreItem(Items.LeatherArmour);
 				System.out.println("CoNgrATulaTionS You have aquired some crappy leather armour");
+				
 			}
 		}
 }

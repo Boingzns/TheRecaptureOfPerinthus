@@ -44,6 +44,7 @@ public class Part_1 {
 		System.out.println("Cautiously making sure that no-one is watching, you proceed down some darkened, rotting rungs into the dank subterrenean world of the sewers");
 		System.out.println("Proceeding forth into the tunnels, you hold your nose as the smell forces violent retching from your body, your stomach toiling in the overwhelming harshness of the muck.");
 		System.out.println("Fearing tempramental illness that could upset your mission you hasten your scarpering down the underground passages further");
+		System.out.println("After what felt like hours of rushing through the dark, horrific passages, you resurface and gasp in fresher air of the main courtyard of the keep");
 	}
 
 	private static void Choice2Bit() {

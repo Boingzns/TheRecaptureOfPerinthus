@@ -54,8 +54,7 @@ public class Inventory {
 			for (String key : dictionary.keySet())
 			{
 				InventoryItem item = dictionary.get(key);
-				boolean item_equipped = item.equipped;
-				if(item_equipped == true)
+				if(item.equipped)
 					totalItemSkillBoost += item.SkillBoost;	
 			}
 		}
@@ -71,8 +70,7 @@ public class Inventory {
 			for (String key : dictionary.keySet())
 			{
 				InventoryItem item = dictionary.get(key);
-				boolean item_equipped = item.equipped;
-				if(item_equipped == true)
+				if(item.equipped)
 					totalItemHealthBoost += item.HealthBoost;	
 			}
 		}

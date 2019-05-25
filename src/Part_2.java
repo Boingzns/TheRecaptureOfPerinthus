@@ -3,7 +3,7 @@ public class Part_2 {
 
 	static BattleSequencer battler;
 
-	public static void Approach_the_Castle(MainCharacter mainy) {
+	public static void The_Keep(MainCharacter mainy) {
 		KindInputTaker input = new KindInputTaker();
 		battler = new BattleSequencer(input);
 
@@ -27,7 +27,7 @@ public class Part_2 {
 			
 				if (theirChoice11.equals("A")) {
 					LookAroundFindCastleSewer();
-		}
+		}}
 		
 	}
 

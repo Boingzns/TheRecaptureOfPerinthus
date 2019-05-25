@@ -48,10 +48,16 @@ public class Inventory {
 	public int GetEquippedSkillBoost()
 	{
 		int totalItemSkillBoost = 0;
-		for (String key : other.keySet())
+		HashSet<HashMap<String, InventoryItem>> dictionarys = MakeSetOfHashMaps();
+		for (HashMap<String, InventoryItem> dictionary : dictionarys)
 		{
-			InventoryItem item = other.get(key);
-			totalItemSkillBoost += item.SkillBoost;
+			for (String key : dictionary.keySet())
+			{
+				InventoryItem item = dictionary.get(key);
+				boolean item_equipped = item.equipped;
+				if(item_equipped == true)
+					totalItemSkillBoost += item.SkillBoost;	
+			}
 		}
 		return totalItemSkillBoost;	
 	}
@@ -59,10 +65,16 @@ public class Inventory {
 	public int GetEquippedHealthBoost()
 	{
 		int totalItemHealthBoost = 0;
-		for (String key : other.keySet())
+		HashSet<HashMap<String, InventoryItem>> dictionarys = MakeSetOfHashMaps();
+		for (HashMap<String, InventoryItem> dictionary : dictionarys)
 		{
-			InventoryItem item = other.get(key);
-			totalItemHealthBoost += item.HealthBoost;
+			for (String key : dictionary.keySet())
+			{
+				InventoryItem item = dictionary.get(key);
+				boolean item_equipped = item.equipped;
+				if(item_equipped == true)
+					totalItemHealthBoost += item.HealthBoost;	
+			}
 		}
 		return totalItemHealthBoost;	
 	}
@@ -90,3 +102,4 @@ public class Inventory {
 		return dictionarys;
 	}
 }
+

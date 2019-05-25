@@ -9,7 +9,7 @@ public class Items {
 	public static InventoryItem IronArmour = new InventoryItem("Iron Armour", "The standard torso protection for an infantry foot soldier",2,0,"armour");
 	public static InventoryItem Luminescence = new InventoryItem("Blue Vial", "A finely crafted glass botle containing a radiating liquid",0,0,"other");
 	public static InventoryItem Potlid = new InventoryItem("pot lid", "A utensil straight out of the kitchens which can make a mediocre substitute for a shield",1,0,"shield");
-	public static InventoryItem HealthPotion = new Inventorytem("medicinal salve", "a soothing bottled liquid used to close wounds, prepared by the castles medic",10,0,"consumable");
+	public static InventoryItem HealthPotion = new InventoryItem("medicinal salve", "a soothing bottled liquid used to close wounds, prepared by the castles medic",10,0,"consumable");
 	
 	
 }

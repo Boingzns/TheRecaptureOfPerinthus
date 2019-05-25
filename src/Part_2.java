@@ -8,7 +8,7 @@ public class Part_2 {
 		KindInputTaker input = new KindInputTaker();
 		battler = new BattleSequencer(input);
 
-		System.out.println("Having infiltrated the castle, you now head for the castle");
+		System.out.println("Having infiltrated the castle, you now head for the keep");
 		System.out.println("Scanning the area for possible entries, you come up with some ideas");
 		
 		input.PressEnterToContinue();

@@ -18,6 +18,7 @@ public class Part_1 {
 		Choice1Bit(mainy);
 
 		input.Close();
+		return;
 		}
 
 		public static void Impersonatefarmer() {
@@ -45,17 +46,18 @@ public class Part_1 {
 		}
 
 		private static void Choice2Bit(MainCharacter mainCharacter) {
-			System.out.println("Will you: \n A) try to persuade the guard of your need to enter the castle");
+			System.out.println("Will you: \n A) Try to persuade the guard of your need to enter the castle");
 			System.out.println(" B) fight your way through");
 			System.out.println(" C) walk away from the gate and look for an alternative way into the castle");
 			String theirChoice2 = input.GetChoice();
 			if (theirChoice2.equals("A")) {
-				System.out.println("you tell the guard how you need to enter the castle to serve your master his lunch");
+				System.out.println("You tell the guard how you need to enter the castle to serve your master his lunch");
 				System.out.println("He agrees to allow you through");
 				System.out.println("You thank him and continue through the main gate into the castle");
+				System.out.println("Once past the militia guarding the gate, you enter the cold, battered ,main courtyard");
 				
 				input.PressEnterToContinue();
-				Choice3Bit(mainCharacter);
+				Choice4Bit(mainCharacter);
 			}	
 
 			else if (theirChoice2.equals("B")) {
@@ -68,15 +70,14 @@ public class Part_1 {
 		}
 
 		private static void Choice3Bit(MainCharacter mainCharacter) {
-			System.out.println("Will you: A) fight your way through");
-			System.out.println("B) walk away from the gate and look for an alternative way into the city");
+			System.out.println("Will you: A) Fight your way through");
+			System.out.println("B) Walk away from the gate and look for an alternative way into the city");
 			String theirChoice3 = input.GetChoice();
 			
 			if (theirChoice3.equals("A")) {
 				FightGateGuards(mainCharacter, 4);
 			}
 				
-			
 			
 			else if (theirChoice3.equals("B")) {
 				LookAroundFindSewer();
@@ -103,5 +104,25 @@ public class Part_1 {
 				mainCharacter.GetInventory().StoreItem(Items.LeatherArmour);
 				System.out.println("CoNgrATulaTionS You have aquired some crappy leather armour");
 			}
+		}		
+		private static void Choice4Bit(MainCharacter mainCharacter) {
+			System.out.println("Will you: \n A) Head to the main barracks");
+			System.out.println(" B) Hide in a nearby pile of rocks");
+			String fourthChoice = input.GetChoice();
+			
+		if (fourthChoice.equals("A")) {
+			System.out.println("You head toward the main barracks, ghosting amongst other guards heading the same way");
+			System.out.println("upon following them inside you realise your mistake");
+			System.out.println("the place is filled with guards who spot you instantly");
+			System.out.println("Your adventure ends here.");
+
+
+		}
+		else if (fourthChoice.equals("B")) {
+			System.out.println("You crouch in a narrow gap between large rocks");
+			System.out.println("Just in time, you realise, as a group of guards rushes quickly past your perch");
+			System.out.println("Turning your attention to where they are headed, you hear a commotion coming from the gates");
+
+		}
 		}
 }

@@ -22,7 +22,7 @@ public class Part_1 {
 		input.Close();
 		}
 
-	public static void Impersonatefarmer() {
+	public static void Impersonateservant() {
 		System.out.println("You put on a disguise in an attempt to discretely enter the castle without aggravating the obviously sleep deprived, aggressive guards");
 		System.out.println("You approach the entrance dressed like a servant of the general");
 		System.out.println("One of the guards confronts you 5 metres infront of the aperture, an inexperienced militia conscripted only for the war");
@@ -51,6 +51,26 @@ public class Part_1 {
 		GetReadyForPartTwo();
 	}
 
+	private static void Choice1Bit() {
+		System.out.println("Will you: \n A) Start to circle the wall searching for an alternative way in");
+		System.out.println(" B) Impersonate a servant trying to seek refuge in the city");
+		System.out.println(" C) Try and take out the guards at an entrance to force your way through");
+		String firstChoice = input.GetChoice();
+		
+		if (firstChoice.equals("A")) {
+			LookAroundFindSewer();
+		}
+
+		else if (firstChoice.equals("B")) {
+			Impersonateservant();
+			Choice2Bit();
+		}
+		
+		else if (firstChoice.equals("C")) {
+			FightGateGuards(5);
+		}
+	}		
+	
 	private static void Choice2Bit() {
 		System.out.println("Will you: \n A) Try to persuade the guard of your need to enter the castle");
 		System.out.println(" B) fight your way through");
@@ -89,26 +109,6 @@ public class Part_1 {
 			LookAroundFindSewer();
 		}
 	}
-	
-	private static void Choice1Bit() {
-		System.out.println("Will you: \n A) Start to circle the wall searching for an alternative way in");
-		System.out.println(" B) Impersonate a servant trying to seek refuge in the city");
-		System.out.println(" C) Try and take out the guards at an entrance to force your way through");
-		String firstChoice = input.GetChoice();
-		
-		if (firstChoice.equals("A")) {
-			LookAroundFindSewer();
-		}
-
-		else if (firstChoice.equals("B")) {
-			Impersonatefarmer();
-			Choice2Bit();
-		}
-		
-		else if (firstChoice.equals("C")) {
-			FightGateGuards(5);
-		}
-	}		
 	
 	private static void Choice4Bit() {
 		System.out.println("Will you: \n A) Head to the main barracks");

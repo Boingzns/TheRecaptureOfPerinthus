@@ -10,6 +10,6 @@ public class Items {
 	public static InventoryItem Luminescence = new InventoryItem("Blue Vial", "A finely crafted glass botle containing a radiating liquid",0,0,"other");
 	public static InventoryItem Potlid = new InventoryItem("pot lid", "A utensil straight out of the kitchens which can make a mediocre substitute for a shield",1,0,"shield");
 	public static InventoryItem HealthPotion = new InventoryItem("medicinal salve", "a soothing bottled liquid used to close wounds, prepared by the castles medic",10,0,"consumable");
-	
+	public static InventoryItem AssassinsSword = new InventoryItem("Short Sword", "A sword too thin for slashing but perfect for stabbing",0,2,"weapon");
 	
 }

@@ -34,15 +34,19 @@ public class KindInputTaker{
 		// return false if its not good
 		else return false;
 	}
+	
+	public void PressEnterToContinue() {
+		System.out.println("Press enter to continue");
+		scanner.nextLine();
+	}
 
 	public void PressEnterToContinueOrIForInventory(Inventory inventory) {
 		if (inventory == null) {
-			System.out.println("Press enter to continue");
-			scanner.nextLine();
+			PressEnterToContinue();
 			return;
 		}
 
-		System.out.println("Press enter to continue or press I or R for inventory commands");
+		System.out.println("Press enter to continue or press I (print inventory) or R (equip items)");
 		
 		String playerInput = scanner.nextLine();
 		
@@ -53,22 +57,26 @@ public class KindInputTaker{
 			playerInput = scanner.nextLine();
 		}
 
-		System.out.println("At Least To Here");
+		playerInput.toUpperCase();
 		if (playerInput.equals ("I")) {
-
-			System.out.println("I sleecteds");
 			inventory.InventoryList();
 		}
 		
 		if (playerInput.equals("R")) {
 			inventory.InventoryList();
+			
+			
 			System.out.println("Choose your weapon");
 			String key1 = scanner.nextLine();
 			while (!inventory.weapons.containsKey(key1))
 				System.out.println("Try again");
 				key1 = scanner.nextLine();
+			System.out.println("found item?");
 			InventoryItem item1 = inventory.GetItem(key1);
+			System.out.println("gotten Item");			
 			item1.equipped = true;
+			
+			
 			System.out.println("Choose your armour");
 			String key2 = scanner.nextLine();
 			while (!inventory.armour.containsKey(key2))
@@ -76,6 +84,8 @@ public class KindInputTaker{
 				key2 = scanner.nextLine();
 			InventoryItem item2 = inventory.GetItem(key2);
 			item2.equipped = true;
+			
+			
 			System.out.println("Choose your shield");
 			String key3 = scanner.nextLine();
 			while (!inventory.shields.containsKey(key3))
@@ -83,6 +93,8 @@ public class KindInputTaker{
 				key3 = scanner.nextLine();
 			InventoryItem item3 = inventory.GetItem(key3);
 			item3.equipped = true;
+			
+			
 			System.out.println("Choose a quick use consumable");
 			String key4 = scanner.nextLine();
 			while (!inventory.consumables.containsKey(key4))
@@ -91,6 +103,8 @@ public class KindInputTaker{
 			InventoryItem item4 = inventory.GetItem(key4);
 			item4.equipped = true;
 		}
+		
+		PressEnterToContinue();
 	}
 	
 	private boolean AcceptableInputOnEnter(String playerInput) {

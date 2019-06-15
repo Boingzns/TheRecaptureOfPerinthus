@@ -20,7 +20,7 @@ public class InventoryItem{
 	public String ToString() 
 	{
 		return String.format(
-				"Name: %s, Description: %s, Health Boost: %i, Skill Boost: %i, type: %s",
+				"Name: %s, Description: %s, Health Boost: %d, Skill Boost: %d, type: %s",
 				Name, Description, HealthBoost, SkillBoost, usageType);
 	}
 }

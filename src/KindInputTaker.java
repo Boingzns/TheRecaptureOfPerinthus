@@ -62,7 +62,7 @@ public class KindInputTaker{
 			playerInput = scanner.nextLine();
 		}
 
-		playerInput.toUpperCase();
+		playerInput = playerInput.toUpperCase();
 		if (playerInput.equals ("I")) {
 			inventory.InventoryList();
 		}
@@ -71,15 +71,19 @@ public class KindInputTaker{
 			inventory.InventoryList();
 			
 			
-			System.out.println("Choose your weapon");
-			String key1 = scanner.nextLine();
-			while (!inventory.weapons.containsKey(key1))
-				System.out.println("Try again");
-				key1 = scanner.nextLine();
-			System.out.println("found item?");
-			InventoryItem item1 = inventory.GetItem(key1);
-			System.out.println("gotten Item");			
-			item1.equipped = true;
+			boolean weaponSuccess = false;
+			while (!weaponSuccess) {
+				System.out.println("Choose your weapon");
+				String key1 = scanner.nextLine();
+				if (inventory.weapons.containsKey(key1)) {
+					InventoryItem item1 = inventory.GetItem(key1);
+					item1.equipped = true;
+					weaponSuccess = true;
+				}
+				else {
+					System.out.println("try again");
+				}
+			}
 			
 			
 			System.out.println("Choose your armour");

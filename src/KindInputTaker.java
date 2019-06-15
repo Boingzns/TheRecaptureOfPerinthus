@@ -50,6 +50,11 @@ public class KindInputTaker{
 		
 		String playerInput = scanner.nextLine();
 		
+		if (playerInput.equals("")){
+			// They just pressed enter, just continue
+			return;
+		}
+		
 		while (playerInput.length() != 1 
 				|| !AcceptableInputOnEnter(playerInput))
 		{

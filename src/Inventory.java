@@ -35,6 +35,7 @@ public class Inventory {
 	
 	public void InventoryList() {
 		HashSet<HashMap<String, InventoryItem>> dictionarys = MakeSetOfHashMaps();
+		System.out.println("Inventory:");
 		for (HashMap<String, InventoryItem> dictionary : dictionarys)
 		{
 			for (String key : dictionary.keySet())

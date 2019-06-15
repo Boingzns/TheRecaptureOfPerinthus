@@ -13,7 +13,6 @@ public class Part_2 {
 		theirChoice10();
 	}
 
-		
 	private static void FightGateGuards1() {
 		BasicMilitia[] guards = new BasicMilitia[] { 
 				new BasicMilitia(), 

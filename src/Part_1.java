@@ -15,7 +15,7 @@ public class Part_1 {
 		System.out.println("the general lies within.");
 		System.out.println("Due to the recent capture the city the castle is in lockdown and guards patrol the great walls;");
 		
-		input.PressEnterToContinue();
+		input.PressEnterToContinueOrIForInventory(mainCharacter.GetInventory());
 
 		Choice1Bit();
 
@@ -28,7 +28,7 @@ public class Part_1 {
 		System.out.println("One of the guards confronts you 5 metres infront of the aperture, an inexperienced militia conscripted only for the war");
 		System.out.println("He tells you that the gate is closed and to turn around before he takes you into custody");
 		
-		input.PressEnterToContinue();
+		input.PressEnterToContinueOrIForInventory(mainCharacter.GetInventory());
 	}
 
 	private static void FightGateGuards(int numGuards) {
@@ -37,9 +37,6 @@ public class Part_1 {
 			battler.Battle(mainCharacter, guard);
 			numGuards --;
 		}
-		mainCharacter.GetInventory().StoreItem(Items.LeatherArmour);
-		System.out.println("CoNgrATulaTionS You have aquired some crappy leather armour");
-		GetReadyForPartTwo();
 	}
 
 	private static void LookAroundFindSewer() {
@@ -48,7 +45,6 @@ public class Part_1 {
 		System.out.println("Proceeding forth into the tunnels, you hold your nose as the smell forces violent retching from your body, your stomach toiling in the overwhelming harshness of the muck.");
 		System.out.println("Fearing tempramental illness that could upset your mission you hasten your scarpering down the underground passages further");
 		System.out.println("After what felt like hours of rushing through the dark, horrific passages, you resurface and gasp in fresher air of the main courtyard of the keep");
-		GetReadyForPartTwo();
 	}
 
 	private static void Choice1Bit() {
@@ -82,7 +78,7 @@ public class Part_1 {
 			System.out.println("You thank him and continue through the main gate into the castle");
 			System.out.println("Once past the militia guarding the gate, you enter the cold, battered ,main courtyard");
 			
-			input.PressEnterToContinue();
+			input.PressEnterToContinueOrIForInventory(mainCharacter.GetInventory());
 			Choice4Bit();
 		}	
 
@@ -120,8 +116,6 @@ public class Part_1 {
 			System.out.println("upon following them inside you realise your mistake");
 			System.out.println("the place is filled with guards who spot you instantly");
 			System.out.println("Your adventure ends here.");
-			ded();
-			
 
 		}
 		else if (fourthChoice.equals("B")) {
@@ -133,11 +127,7 @@ public class Part_1 {
 		System.out.println("You crouch in a narrow gap between large rocks");
 		System.out.println("Just in time, you realise, as a group of guards rushes quickly past your perch");
 		System.out.println("Turning your attention to where they are headed, you hear a commotion coming from the gates");
-		input.PressEnterToContinue();
 		Part_2.The_Keep(mainCharacter);
+		
 	}
-	
-	public static void ded() {
-		Dead.ded(mainCharacter);
-
-	}}
+}

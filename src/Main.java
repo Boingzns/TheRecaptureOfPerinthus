@@ -9,6 +9,9 @@ public class Main {
 		protagonist = new MainCharacter();
 		protagonist.CreateStats(); 
 		
+		protagonist.GetInventory().StoreItem(Items.AssassinsSword);
+		Items.AssassinsSword.equipped = true;
+		
 		Part_1.Approach_the_Castle(protagonist);						
 	}
 }

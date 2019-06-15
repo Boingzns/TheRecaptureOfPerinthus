@@ -15,7 +15,7 @@ public class Part_1 {
 		System.out.println("the general lies within.");
 		System.out.println("Due to the recent capture the city the castle is in lockdown and guards patrol the great walls;");
 		
-		input.PressEnterToContinue();
+		input.PressEnterToContinueOrIForInventory(mainCharacter.GetInventory());
 
 		Choice1Bit();
 
@@ -28,7 +28,7 @@ public class Part_1 {
 		System.out.println("One of the guards confronts you 5 metres infront of the aperture, an inexperienced militia conscripted only for the war");
 		System.out.println("He tells you that the gate is closed and to turn around before he takes you into custody");
 		
-		input.PressEnterToContinue();
+		input.PressEnterToContinueOrIForInventory(mainCharacter.GetInventory());
 	}
 
 	private static void FightGateGuards(int numGuards) {
@@ -58,7 +58,7 @@ public class Part_1 {
 			System.out.println("You thank him and continue through the main gate into the castle");
 			System.out.println("Once past the militia guarding the gate, you enter the cold, battered ,main courtyard");
 			
-			input.PressEnterToContinue();
+			input.PressEnterToContinueOrIForInventory(mainCharacter.GetInventory());
 			Choice4Bit();
 		}	
 

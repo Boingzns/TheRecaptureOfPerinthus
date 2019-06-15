@@ -37,7 +37,7 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			
 			//wait for user enter
 			try {
-				inputPlace.PressEnterToContinue();
+				inputPlace.PressEnterToContinueOrIForInventory(null);
 			} catch (Exception e) {
 			}
 			

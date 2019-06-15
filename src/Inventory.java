@@ -34,7 +34,10 @@ public class Inventory {
 	}
 	
 	public void InventoryList() {
+		System.out.println("InventoryList");
 		HashSet<HashMap<String, InventoryItem>> dictionarys = MakeSetOfHashMaps();
+
+		System.out.println("InventoryList: number of dictionaries " + dictionarys.size());
 		for (HashMap<String, InventoryItem> dictionary : dictionarys)
 		{
 			for (String key : dictionary.keySet())
@@ -96,6 +99,7 @@ public class Inventory {
 		dictionarys.add(armour);
 		dictionarys.add(shields);
 		dictionarys.add(consumables);
+		System.out.println("InventoryList: number of items in all dictionarys " + dictionarys.size());
 		
 		return dictionarys;
 	}

@@ -71,17 +71,19 @@ public class KindInputTaker{
 			inventory.InventoryList();
 			
 			
-			boolean weaponSuccess = false;
-			while (!weaponSuccess) {
-				System.out.println("Choose your weapon");
-				String key1 = scanner.nextLine();
-				if (inventory.weapons.containsKey(key1)) {
-					InventoryItem item1 = inventory.GetItem(key1);
-					item1.equipped = true;
-					weaponSuccess = true;
-				}
-				else {
-					System.out.println("try again");
+			if (!inventory.weapons.isEmpty()) {
+				boolean weaponSuccess = false;
+				while (!weaponSuccess) {
+					System.out.println("Choose your weapon");
+					String key1 = scanner.nextLine();
+					if (inventory.weapons.containsKey(key1)) {
+						InventoryItem item1 = inventory.GetItem(key1);
+						item1.equipped = true;
+						weaponSuccess = true;
+					}
+					else {
+						System.out.println("try again");
+					}
 				}
 			}
 			

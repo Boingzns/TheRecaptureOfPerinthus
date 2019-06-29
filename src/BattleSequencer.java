@@ -62,7 +62,7 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 				// press B to try again and A to Quit
 				System.out.println("\n\n\nPress A to to exit to the ethereal plane or Press B or C to reset the wheels of time");
 				String endChoice = inputPlace.GetChoice();
-				if(endChoice.equals('A')) {
+				if(endChoice.equals("A")) {
 					System.exit(0);
 				}
 				Main.main(new String[]{});

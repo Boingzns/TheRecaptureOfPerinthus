@@ -58,7 +58,7 @@ public class BattleSequencer implements Interfaces.IBattleSequencer {
 			}
 			
 			if(mainy.IsDead()) {
-				System.out.println("Game Over");
+				System.out.println("Your Adventure Ends Here");
 			}
 			
 			if(enemy.IsDead()) {

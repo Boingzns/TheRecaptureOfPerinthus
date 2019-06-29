@@ -1,8 +1,8 @@
 public class Sentry implements Interfaces.IEnemy {
-	private int Health = 7;
+	private int Health = 8;
 	
 	public int GetSkill() {
-		return 6;
+		return 10;
 	}
 
 	public int GetHealth() {

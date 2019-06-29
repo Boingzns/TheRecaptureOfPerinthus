@@ -22,12 +22,17 @@ public class Part_2 {
 		battler.Battle(mainCharacter, guards);
 	}
 	
+	private static void LookAroundFindCastleDungeon() {
+		System.out.println("Walking down the stairs you ");
+		System.out.println("THERE IS A DRAGON");
+	
+	}
 	private static void theirChoice10() {
 		System.out.println("Scanning the crumbling courtyard for possible entries, you come up with some ideas");
 		input.PressEnterToContinue();
 		System.out.println("Will you: \n A) head into the myriad of corridors that make up the lower parts of the keep");
-		System.out.println(" B) head to the banqueting hall and ajoining kitchens");
-		System.out.println(" C) investigate the commotion at the gates");
+		System.out.println(" B) Head to the banqueting hall and ajoining kitchens");
+		System.out.println(" C) Investigate the commotion at the gates");
 		String theirChoice10 = input.GetChoice();
 		
 		if (theirChoice10.equals("A")) {
@@ -38,7 +43,11 @@ public class Part_2 {
 		}
 
 		else if (theirChoice10.equals("B")) {
-			System.out.println("As you enter the kitchen....");
+			System.out.println("As you enter the kitchen the smell rotting flesh assaults your nostrils");
+			System.out.println("Nervously crossing the room you see a figure hunched over an oven");
+			System.out.println("His muscles bulge out of his chefs outfit and he turns slowly to face you");
+			System.out.println("You have met... Ze Baker");
+			System.out.println("Your advenure ends here");
 		}
 
 		else if (theirChoice10.equals("C")) {
@@ -48,18 +57,21 @@ public class Part_2 {
 		
 	private static void theirChoice11() {
 		System.out.println("Will you: \n A) take the left path down the stairs");
-		System.out.println(" B) take the right continuing onto another corridor");
-		System.out.println(" C) hide and see who is approaching");
+		System.out.println(" B) Take the right continuing onto another corridor");
+		System.out.println(" C) Hide and see who is approaching");
 		String theirChoice11 = input.GetChoice();
 	
 		if (theirChoice11.equals("A")) {
-			LookAroundFindCastleSewer();
+			LookAroundFindCastleDungeon();
 		}
-	}
-
-	private static void LookAroundFindCastleSewer() {
-		// TODO Auto-generated method stub
 		
+		else if (theirChoice11.equals("B")) {
+		}
+		
+		else if (theirChoice11.equals("C")) {
+			System.out.println("
+		}
+
 	}
 }
 

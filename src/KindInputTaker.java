@@ -13,7 +13,7 @@ public class KindInputTaker{
 		while (whatTheyWrote.length() != 1 
 				|| !AcceptableInput(whatTheyWrote))
 		{
-			System.out.println("Try again");
+		 	System.out.println("Try again");
 			whatTheyWrote = scanner.nextLine();
 		}
 
@@ -88,31 +88,54 @@ public class KindInputTaker{
 			}
 			
 			
-			System.out.println("Choose your armour");
-			String key2 = scanner.nextLine();
-			while (!inventory.armour.containsKey(key2))
-				System.out.println("Try again");
-				key2 = scanner.nextLine();
-			InventoryItem item2 = inventory.GetItem(key2);
-			item2.equipped = true;
+			if (!inventory.armour.isEmpty()) {
+				boolean armourSuccess = false;
+				while (!armourSuccess) {
+					System.out.println("Choose your armour");
+					String key2 = scanner.nextLine();
+					if (inventory.armour.containsKey(key2)) {
+						InventoryItem item2 = inventory.GetItem(key2);
+						item2.equipped = true;
+						armourSuccess = true;
+					}
+					else {
+						System.out.println("try again");
+					}
+				}
+			}
+			
+			if (!inventory.shields.isEmpty()) {
+				boolean shieldSuccess = false;
+				while (!shieldSuccess) {
+					System.out.println("Choose your shield");
+					String key3 = scanner.nextLine();
+					if (inventory.shields.containsKey(key3)) {
+						InventoryItem item3 = inventory.GetItem(key3);
+						item3.equipped = true;
+						shieldSuccess = true;
+					}
+					else {
+						System.out.println("try again");
+					}
+				}
+			}
 			
 			
-			System.out.println("Choose your shield");
-			String key3 = scanner.nextLine();
-			while (!inventory.shields.containsKey(key3))
-				System.out.println("Try again");
-				key3 = scanner.nextLine();
-			InventoryItem item3 = inventory.GetItem(key3);
-			item3.equipped = true;
-			
-			
-			System.out.println("Choose a quick use consumable");
-			String key4 = scanner.nextLine();
-			while (!inventory.consumables.containsKey(key4))
-				System.out.println("Try again");
-				key4 = scanner.nextLine();
-			InventoryItem item4 = inventory.GetItem(key4);
-			item4.equipped = true;
+			if (!inventory.consumables.isEmpty()) {
+				boolean consumableSuccess = false;
+				while (!consumableSuccess) {
+					System.out.println("Choose your quick-slot consumable");
+					String key4 = scanner.nextLine();
+					if (inventory.consumables.containsKey(key4)) {
+						InventoryItem item4 = inventory.GetItem(key4);
+						item4.equipped = true;
+						consumableSuccess = true;
+					}
+					else {
+						System.out.println("try again");
+					}
+				}
+			}
 		}
 		
 		PressEnterToContinue();

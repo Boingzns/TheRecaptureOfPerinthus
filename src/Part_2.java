@@ -25,6 +25,7 @@ public class Part_2 {
 	private static void LookAroundFindCastleDungeon() {
 		System.out.println("Walking down the stairs you ");
 		System.out.println("THERE IS A DRAGON");
+		System.out.println("You dead aka. your adventure ends here");
 	
 	}
 	private static void theirChoice10() {

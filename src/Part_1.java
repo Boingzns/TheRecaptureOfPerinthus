@@ -82,7 +82,7 @@ public class Part_1 {
 			System.out.println("Once past the militia guarding the gate, you enter the cold, battered ,main courtyard");
 			
 			input.PressEnterToContinueOrIForInventory(mainCharacter.GetInventory());
-			Choice4Bit();
+			Choice3Bit();
 		}	
 
 		else if (theirChoice2.equals("B")) {
@@ -92,32 +92,18 @@ public class Part_1 {
 		else if (theirChoice2.equals("C")) {
 			LookAroundFindSewer();	
 		}
-	}
-
-	private static void Choice3Bit() {
-		System.out.println("Will you: A) Fight your way through");
-		System.out.println("B) Walk away from the gate and look for an alternative way into the city");
-		String theirChoice3 = input.GetChoice();
-		
-		if (theirChoice3.equals("A")) {
-			FightGateGuards(4);
-		}
-			
-		
-		else if (theirChoice3.equals("B")) {
-			LookAroundFindSewer();
-		}
+	
 	}
 	
-	private static void Choice4Bit() {
+	private static void Choice3Bit() {
 		System.out.println("Will you: \n A) Head to the main barracks");
 		System.out.println(" B) Hide in a nearby pile of rocks");
 		String fourthChoice = input.GetChoice();
 		
 		if (fourthChoice.equals("A")) {
 			System.out.println("You head toward the main barracks, ghosting amongst other guards heading the same way");
-			System.out.println("upon following them inside you realise your mistake");
-			System.out.println("the place is filled with guards who spot you instantly");
+			System.out.println("Upon following them inside you realise your mistake");
+			System.out.println("The place is filled with guards who spot you instantly");
 			System.out.println("Your adventure ends here.");
 
 		}

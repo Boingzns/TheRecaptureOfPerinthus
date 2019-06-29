@@ -45,6 +45,9 @@ public class Part_1 {
 		System.out.println("Proceeding forth into the tunnels, you hold your nose as the smell forces violent retching from your body, your stomach toiling in the overwhelming harshness of the muck.");
 		System.out.println("Fearing tempramental illness that could upset your mission you hasten your scarpering down the underground passages further");
 		System.out.println("After what felt like hours of rushing through the dark, horrific passages, you resurface and gasp in fresher air of the main courtyard of the keep");
+		System.out.println("Finally you surface, gasping in great gulps of fresh air with a desperate primal need that makes you forget all motions of inconspicuity");
+		System.out.println("Glancing around, you thank the gods that nobody noticed your distressed outburst, and begin to plan your next move");
+		Part_2.The_Keep(mainCharacter);
 	}
 
 	private static void Choice1Bit() {

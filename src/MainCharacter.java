@@ -2,7 +2,7 @@ public class MainCharacter implements Interfaces.IMainCharacter{
 	
 	private int Health = 0;
 	private int Skill = 0;
-	private int baseSkill = 4;
+	private int baseSkill = 0;//4
 	private int baseHealth = 4;
 	private int maxSkill = 0;
 	private int maxHealth = 0;

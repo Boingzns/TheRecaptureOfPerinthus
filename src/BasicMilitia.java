@@ -8,7 +8,7 @@ public class BasicMilitia implements Interfaces.IEnemy {
 	};
 	
 	public int GetSkill() {
-		return 12;
+		return 8;
 	}
 
 	public int GetHealth() {
